@@ -217,17 +217,11 @@ img { max-width: 100%; }
   align-items: start;
 }
 
-.photo-placeholder {
+.daihyo-photo {
   width: 100%;
-  aspect-ratio: 3/4;
-  background: #e8eef6;
   border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #aaa;
-  font-size: 0.9rem;
-  border: 2px dashed #c5d3e8;
+  object-fit: cover;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
 }
 
 .greeting-name {
