@@ -344,6 +344,18 @@ img { max-width: 100%; }
 
 .jigyou-link:hover { opacity: 0.7; }
 
+.under-construction {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 4px 12px;
+  background: #fff8e1;
+  color: #b45309;
+  font-size: 0.82rem;
+  font-weight: 700;
+  border-radius: 4px;
+  border: 1px solid #fcd34d;
+}
+
 /* ===== 会社紹介 ===== */
 .kaisha-table {
   width: 100%;
