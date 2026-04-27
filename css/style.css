@@ -241,6 +241,69 @@ img { max-width: 100%; }
   color: #444;
 }
 
+/* ===== 著作 ===== */
+.books-row {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 56px;
+  flex-wrap: wrap;
+}
+
+.book-card {
+  text-align: center;
+  width: 180px;
+}
+
+.book-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.book-img {
+  width: 160px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: -4px 4px 0 #c0c8d8, 0 8px 24px rgba(0,0,0,0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.book-link:hover .book-img {
+  transform: translateY(-4px);
+  box-shadow: -4px 8px 0 #b0b8c8, 0 12px 32px rgba(0,0,0,0.2);
+}
+
+.book-title-text {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1a3a6b;
+  line-height: 1.6;
+}
+
+.book-author {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.book-buy-btn {
+  display: inline-block;
+  padding: 8px 20px;
+  background: #ff9900;
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.book-link:hover .book-buy-btn {
+  background: #e68900;
+}
+
 /* ===== 理念 ===== */
 .rinen-main {
   text-align: center;
