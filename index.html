@@ -26,6 +26,7 @@
           <li><a href="#kaisha">会社紹介</a></li>
           <li><a href="#enkaku">会社沿革</a></li>
           <li><a href="#recruit">人材募集</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
         </ul>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="メニュー">
@@ -299,23 +300,33 @@
             </ul>
           </div>
         </div>
-        <div class="recruit-contact">
-          <p>弊社へのお問い合わせは以下にご入力の上、ご送信をお願いします。</p>
-          <form class="contact-form" action="https://formspree.io/f/xpwzgkqv" method="POST">
-            <div class="contact-row">
-              <label>お名前<span class="required">必須</span>
-                <input type="text" name="name" placeholder="例）山田 太郎" required>
-              </label>
-              <label>メールアドレス<span class="required">必須</span>
-                <input type="email" name="email" placeholder="例）example@mail.com" required>
-              </label>
-            </div>
-            <label>お問い合わせ内容<span class="required">必須</span>
-              <textarea name="message" rows="5" placeholder="お問い合わせ内容をご記入ください" required></textarea>
+      </div>
+    </div>
+  </section>
+
+  <!-- お問い合わせ -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Contact</p>
+        <h2 class="section-title">お問い合わせ</h2>
+      </div>
+      <div class="recruit-contact">
+        <p class="contact-lead">弊社へのお問い合わせは以下にご入力の上、ご送信をお願いします。</p>
+        <form class="contact-form" action="https://formspree.io/f/xpwzgkqv" method="POST">
+          <div class="contact-row">
+            <label>お名前<span class="required">必須</span>
+              <input type="text" name="name" placeholder="例）山田 太郎" required>
             </label>
-            <button type="submit" class="btn btn-white">送信する</button>
-          </form>
-        </div>
+            <label>メールアドレス<span class="required">必須</span>
+              <input type="email" name="email" placeholder="例）example@mail.com" required>
+            </label>
+          </div>
+          <label>お問い合わせ内容<span class="required">必須</span>
+            <textarea name="message" rows="5" placeholder="お問い合わせ内容をご記入ください" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">送信する</button>
+        </form>
       </div>
     </div>
   </section>
