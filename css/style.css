@@ -566,10 +566,81 @@ img { max-width: 100%; }
   text-align: center;
 }
 
-.recruit-contact p {
+.recruit-contact > p {
   color: rgba(255,255,255,0.8);
-  margin-bottom: 20px;
+  margin-bottom: 28px;
   font-size: 0.95rem;
+}
+
+.contact-form {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.contact-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.85);
+}
+
+.required {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  background: #ef4444;
+  color: #fff;
+  font-size: 0.7rem;
+  border-radius: 3px;
+  font-weight: 700;
+  vertical-align: middle;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 6px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 0.95rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255,255,255,0.4);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #93c5fd;
+  background: rgba(255,255,255,0.15);
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form .btn-white {
+  align-self: center;
+  margin-top: 8px;
+  padding: 14px 48px;
 }
 
 /* ===== フッター ===== */
@@ -657,6 +728,7 @@ img { max-width: 100%; }
   .rinen-cards { grid-template-columns: 1fr; }
   .jigyou-cards { grid-template-columns: 1fr; }
   .recruit-cards { grid-template-columns: 1fr; }
+  .contact-row { grid-template-columns: 1fr; }
 
   .enkaku-list::before { left: 80px; }
   .enkaku-item::after { left: 73px; }
