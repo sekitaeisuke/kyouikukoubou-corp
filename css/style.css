@@ -643,6 +643,207 @@ img { max-width: 100%; }
   padding: 14px 48px;
 }
 
+/* ===== 教室一覧 ===== */
+.kyoushitsu-lead {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 48px;
+  line-height: 1.9;
+}
+
+.kyoushitsu-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.kyoushitsu-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  transition: box-shadow 0.2s, transform 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.kyoushitsu-card:hover {
+  box-shadow: 0 8px 32px rgba(26,59,107,0.12);
+  transform: translateY(-2px);
+}
+
+.kyoushitsu-head {
+  background: linear-gradient(135deg, #1a3a6b, #1a6bc5);
+  padding: 20px 24px;
+}
+
+.kyoushitsu-name {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.kyoushitsu-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  background: #fff;
+  color: #1a3a6b;
+  font-size: 0.7rem;
+  font-weight: 700;
+  border-radius: 12px;
+  letter-spacing: 0.05em;
+}
+
+.kyoushitsu-badge-honsha {
+  background: #fbbf24;
+  color: #7c5a00;
+}
+
+.kyoushitsu-body {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.kyoushitsu-info {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  row-gap: 12px;
+  column-gap: 12px;
+  font-size: 0.9rem;
+}
+
+.kyoushitsu-info dt {
+  color: #1a3a6b;
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding-top: 2px;
+}
+
+.kyoushitsu-info dd {
+  color: #444;
+  line-height: 1.7;
+}
+
+.kyoushitsu-info dd a {
+  color: #1a6bc5;
+  font-weight: 700;
+}
+
+.kyoushitsu-info dd a:hover { text-decoration: underline; }
+
+.kyoushitsu-map {
+  margin-top: auto;
+}
+
+.kyoushitsu-map iframe {
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+  filter: grayscale(0.15);
+}
+
+.kyoushitsu-map-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: #1a6bc5;
+  font-weight: 700;
+  transition: opacity 0.2s;
+}
+
+.kyoushitsu-map-link:hover { opacity: 0.7; }
+
+/* ===== プライバシーポリシー ===== */
+.privacy-inner {
+  max-width: 820px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 48px 56px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.privacy-intro {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 2;
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e8eef6;
+}
+
+.privacy-h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a3a6b;
+  margin-top: 28px;
+  margin-bottom: 12px;
+  padding-left: 14px;
+  border-left: 4px solid #1a6bc5;
+  line-height: 1.5;
+}
+
+.privacy-inner p {
+  font-size: 0.92rem;
+  color: #444;
+  line-height: 1.9;
+  margin-bottom: 12px;
+}
+
+.privacy-inner p a {
+  color: #1a6bc5;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.privacy-list {
+  margin: 8px 0 16px 4px;
+  padding-left: 20px;
+}
+
+.privacy-list li {
+  list-style: disc;
+  margin-bottom: 6px;
+  font-size: 0.92rem;
+  color: #444;
+  line-height: 1.9;
+}
+
+.privacy-contact {
+  background: #f5f7fa;
+  padding: 20px 24px;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+
+.privacy-contact p {
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+}
+
+.privacy-contact p a {
+  color: #1a6bc5;
+  font-weight: 700;
+}
+
+.privacy-date {
+  margin-top: 36px;
+  padding-top: 20px;
+  border-top: 1px solid #e8eef6;
+  text-align: right;
+  color: #777;
+  font-size: 0.85rem !important;
+  line-height: 1.8;
+}
+
 /* ===== フッター ===== */
 .footer {
   background: #111827;
@@ -727,8 +928,12 @@ img { max-width: 100%; }
 
   .rinen-cards { grid-template-columns: 1fr; }
   .jigyou-cards { grid-template-columns: 1fr; }
+  .kyoushitsu-list { grid-template-columns: 1fr; }
   .recruit-cards { grid-template-columns: 1fr; }
   .contact-row { grid-template-columns: 1fr; }
+
+  .privacy-inner { padding: 32px 24px; }
+  .kyoushitsu-info { grid-template-columns: 56px 1fr; }
 
   .enkaku-list::before { left: 80px; }
   .enkaku-item::after { left: 73px; }
