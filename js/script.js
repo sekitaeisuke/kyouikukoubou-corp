@@ -100,3 +100,10 @@ document.querySelectorAll('.hero-stat-num[data-count]').forEach((el) => {
   // ヒーローは最初から見えているので読み込み後に発火
   animateCount(el);
 });
+
+// 口コミマーキーをシームレスにループ（同じ内容を複製）
+const voiceTrack = document.querySelector('#voiceMarquee .voice-track');
+if (voiceTrack && !prefersReducedMotion) {
+  const cards = [...voiceTrack.children];
+  cards.forEach((card) => voiceTrack.appendChild(card.cloneNode(true)));
+}
