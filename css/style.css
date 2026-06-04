@@ -1230,37 +1230,40 @@ img { max-width: 100%; }
 
 .sns-cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  max-width: 760px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+  max-width: 920px;
   margin: 0 auto;
 }
 
 .sns-card {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
   gap: 16px;
   background: #fff;
   border: 1px solid #e6edf6;
-  border-radius: 14px;
-  padding: 20px 22px;
+  border-radius: 16px;
+  padding: 36px 24px 32px;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .sns-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 28px rgba(26,59,107,0.12);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(26,59,107,0.14);
 }
 
 .sns-icon {
   flex-shrink: 0;
-  width: 50px;
-  height: 50px;
-  border-radius: 14px;
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
 .sns-ig .sns-icon {
@@ -1274,33 +1277,32 @@ img { max-width: 100%; }
 .sns-info {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  flex: 1;
-  min-width: 0;
+  gap: 6px;
+  width: 100%;
 }
 
 .sns-name {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #1a3a6b;
+  line-height: 1.4;
 }
 
 .sns-handle {
   font-size: 0.8rem;
-  color: #888;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  color: #8a93a3;
+  word-break: break-all;
+  line-height: 1.5;
 }
 
 .sns-follow {
-  flex-shrink: 0;
-  font-size: 0.8rem;
+  margin-top: 4px;
+  font-size: 0.85rem;
   font-weight: 700;
   color: #1a6bc5;
   border: 1.5px solid #1a6bc5;
-  border-radius: 20px;
-  padding: 6px 16px;
+  border-radius: 22px;
+  padding: 8px 28px;
   transition: background 0.2s, color 0.2s;
 }
 
