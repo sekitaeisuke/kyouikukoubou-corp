@@ -1119,7 +1119,10 @@ img { max-width: 100%; }
 
 /* ===== 生徒・保護者の声 ===== */
 .section-voice {
-  background: linear-gradient(180deg, #fff 0%, #f3f7fc 100%);
+  background:
+    radial-gradient(circle at 12% 18%, rgba(239,111,142,0.08), transparent 42%),
+    radial-gradient(circle at 88% 82%, rgba(26,107,197,0.1), transparent 45%),
+    linear-gradient(180deg, #ffffff 0%, #eaf2fc 100%);
   overflow: hidden;
 }
 
@@ -1167,19 +1170,40 @@ img { max-width: 100%; }
 
 @keyframes voiceBob {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  50% { transform: translateY(-11px); }
 }
 
 .voice-bubble {
   position: relative;
   background: #fff;
   border-radius: 18px;
-  padding: 24px 24px 22px;
-  box-shadow: 0 10px 28px rgba(26,59,107,0.1);
+  padding: 26px 24px 22px;
+  box-shadow: 0 12px 30px rgba(26,59,107,0.12), inset 0 4px 0 #cfe0f3;
   border: 1px solid #eef3fa;
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+/* 話者の種類で上部アクセントの色を変える */
+.voice-card:has(.voice-avatar-parent) .voice-bubble {
+  box-shadow: 0 12px 30px rgba(239,111,142,0.16), inset 0 4px 0 #f3a0ad;
+}
+.voice-card:has(.voice-avatar-student) .voice-bubble {
+  box-shadow: 0 12px 30px rgba(26,107,197,0.16), inset 0 4px 0 #7fb4ec;
+}
+
+/* 大きな引用符の装飾 */
+.voice-bubble::before {
+  content: '\201C';
+  position: absolute;
+  top: 2px;
+  right: 16px;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 3rem;
+  line-height: 1;
+  color: #eef3fa;
+  pointer-events: none;
 }
 
 /* 吹き出しのしっぽ */
@@ -1267,6 +1291,13 @@ img { max-width: 100%; }
 }
 
 /* ===== SNS ===== */
+#sns.section-gray {
+  background:
+    radial-gradient(circle at 85% 12%, rgba(239,111,142,0.1), transparent 40%),
+    radial-gradient(circle at 10% 88%, rgba(26,107,197,0.1), transparent 42%),
+    #f4f8fd;
+}
+
 .sns-lead {
   text-align: center;
   font-size: 0.97rem;
@@ -1275,14 +1306,17 @@ img { max-width: 100%; }
 }
 
 .sns-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 28px;
-  max-width: 920px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  max-width: 940px;
   margin: 0 auto;
 }
 
 .sns-card {
+  flex: 1 1 190px;
+  max-width: 240px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1290,14 +1324,27 @@ img { max-width: 100%; }
   gap: 16px;
   background: #fff;
   border: 1px solid #e6edf6;
-  border-radius: 16px;
-  padding: 36px 24px 32px;
-  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 18px;
+  padding: 34px 22px 28px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
 }
 
+/* カード上部にブランドカラーの帯 */
+.sns-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 5px;
+}
+
+.sns-ig::before { background: linear-gradient(90deg, #f09433, #dc2743, #bc1888); }
+.sns-x::before { background: #111; }
+
 .sns-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(26,59,107,0.14);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(26,59,107,0.16);
 }
 
 .sns-icon {
@@ -1309,7 +1356,12 @@ img { max-width: 100%; }
   align-items: center;
   justify-content: center;
   color: #fff;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  transition: transform 0.25s;
+}
+
+.sns-card:hover .sns-icon {
+  transform: scale(1.08) rotate(-3deg);
 }
 
 .sns-ig .sns-icon {
@@ -1455,6 +1507,6 @@ img { max-width: 100%; }
 }
 
 @media (max-width: 700px) {
-  .sns-cards { grid-template-columns: 1fr; max-width: 420px; }
+  .sns-card { max-width: none; }
   .voice-card { flex-basis: 280px; }
 }
