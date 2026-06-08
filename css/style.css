@@ -234,14 +234,101 @@ img { max-width: 100%; }
   border-bottom: 2px solid #e8eef6;
 }
 
-.greeting-body p {
-  margin-bottom: 16px;
-  font-size: 0.97rem;
-  line-height: 2;
-  color: #444;
+.greeting-name-en {
+  display: inline-block;
+  margin-left: 12px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: #9aa6b8;
+  text-transform: uppercase;
+}
+
+.greeting-role {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #1a6bc5;
+  margin: -14px 0 18px;
+  line-height: 1.6;
+}
+
+.greeting-creds {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 26px;
+}
+
+.greeting-creds li {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #1a3a6b;
+  background: #eef3fa;
+  border: 1px solid #d8e3f1;
+  border-radius: 999px;
+  padding: 5px 14px;
+}
+
+.greeting-body p strong {
+  color: #1a3a6b;
+  font-weight: 700;
+}
+
+.greeting-sign {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 2px solid #e8eef6;
+}
+
+.greeting-sign-name {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a3a6b;
+  letter-spacing: 0.1em;
+}
+
+.greeting-x {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #fff;
+  background: #1a1a1a;
+  border-radius: 999px;
+  padding: 8px 18px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.greeting-x:hover {
+  background: #333;
+  transform: translateY(-2px);
 }
 
 /* ===== 著作 ===== */
+.books-heading {
+  text-align: center;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a3a6b;
+  margin-top: 56px;
+  letter-spacing: 0.16em;
+}
+
+.books-heading + .books-row {
+  margin-top: 24px;
+}
+
 .books-row {
   display: flex;
   gap: 40px;
